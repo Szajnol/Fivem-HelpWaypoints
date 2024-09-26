@@ -11,6 +11,6 @@ function DrawDestination(coords, label, meters)
     SetTextCentre(true)
     SetTextScale(0.0, text_size)
     SetTextEntry("STRING")
-    AddTextComponentString(label .. "\n".. meters .. "m")
+    AddTextComponentString(label .. " | ".. meters .. "m")
     DrawText(X, Y + 0.015)
 end
