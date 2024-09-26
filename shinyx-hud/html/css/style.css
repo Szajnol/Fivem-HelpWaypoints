@@ -1,0 +1,269 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
+
+:root {
+  --primaryColor: #060606;
+  --health: #CC245C;
+  --hunger: #E79557;
+  --thirst: #5C7DF2;
+  --voice: #542398;
+  --dev: a;
+  --fuel: #EBFF6A;
+}
+
+body{
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+  color: white;
+  font-size: 1vw;
+}
+
+@font-face {
+  font-family: 'Digital Numbers Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Digital Numbers Regular'), url('DigitalNumbers-Regular.woff') format('woff');
+  }
+
+
+.container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 3vw;
+  min-width: 3vw;
+  gap: 1vw;
+  bottom: 1.5vw;
+  right: 2vw;
+}
+
+input[type="range"] {
+  margin-top: 20px;
+}
+
+#svgSquare{
+  width: 3vw;
+  height: 3vw;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px inset;
+  border-radius: 0.3vw;
+}
+
+.fa {
+    fill: white;
+    font-weight: 300; /* Zmiana na thin */
+    font-size: 5vw;
+    /* text-shadow: 0px 0px 1vw #CC245C, 0px 0px 1vw #CC245C, 0px 0px 1vw #CC245C, 0px 0px 1vw #CC245C, 0px 0px 1vw #CC245C, 0px 0px 1vw #CC245C, 0px 0px 1vw #CC245C, 0px 0px 1vw #CC245C; */
+}
+
+#health{
+  fill: var(--health);
+  text-shadow: 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health);
+}
+
+#hunger{
+  fill: var(--hunger);
+  text-shadow: 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger);
+}
+
+#thirst{
+  fill: var(--thirst);
+  text-shadow: 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst);
+}
+
+#voice{
+  fill: var(--voice);
+  text-shadow: 0px 0px 1vw var(--voice), 0px 0px 1vw var(--voice), 0px 0px 1vw var(--voice), 0px 0px 1vw var(--voice), 0px 0px 1vw var(--voice), 0px 0px 1vw var(--voice), 0px 0px 1vw var(--voice);
+}
+
+text {
+    pointer-events: none;
+}
+
+.carhud-container{
+  display: flex;
+  gap: 0.5vw;
+  position: absolute;
+  width: 19vw;
+  height: 6.5vw;
+  bottom: -20vw;
+  left: 22vw;
+}
+
+.carhud{
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #060606e1 0%, hsla(279, 37%, 15%, 1) 99%);
+  height: 90%;
+  width: 75%;
+  border-radius: 1vw;
+  border: #542398 solid 0.3vw;
+}
+
+.variables{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5vw;
+  height: 100%;
+  width: 30%;
+}
+
+.x{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2vw;
+  height: 2vw;
+  background: #8D3AFE;
+  font-size: 0.8vw;
+  border-radius: 0.3vw;
+}
+
+
+
+.speed{
+  font-size: 3vw;
+  font-family: 'Digital Numbers Regular';
+  color: white;
+  width: 7.1vw;
+  text-align: right;
+}
+
+.speed::before {
+  position: absolute;
+  left: 3.5vw;
+  content: '888';
+  opacity: 0.2;
+}
+
+/* Tymczasowe rozwiazanie (shit code) */
+
+.type{
+  font-weight: bold;
+  font-size: 1.25vw;
+  margin-right: 0.8vw;
+  margin-top: 2vw; 
+}
+
+
+
+#fuel{
+  fill: var(--fuel);
+  text-shadow: 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1vw var(--fuel);
+}
+
+.fuel{
+  margin-top: auto;
+}
+
+.streetlabel{
+  position: absolute;
+  left: -20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #542398 solid 0.3vw;
+  height: 3vw;
+  width: 18vw;
+  bottom: 14vw;
+  background: linear-gradient(180deg, #060606e1 0%, hsla(279, 37%, 15%, 1) 99%);
+  border-radius: 0.3vw;
+  gap: 1vw;
+}
+
+.fa-map-location-dot{
+  color: #8D3AFE;
+  margin-left: 1vw;
+  margin-right: auto;
+}
+
+.direction{
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 1vw;
+}
+
+.notify-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  position: absolute;
+  right: 1vw;
+  height: 80%;
+  min-width: 10vw;
+}
+
+.notify{
+  position: relative;
+  background: linear-gradient(180deg, #000000 0%, hsla(280, 49%, 23%, 0.9) 99%);
+  height: 2.5vw;
+  min-width: 12vw;
+  right: -20vw;
+}
+
+.data{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  min-width: 100%;
+  height: 90%;
+  font-size: 0.8vw;
+  margin-left: 1vw;
+  margin-right: 2vw;
+}
+
+.desc{
+  margin-right: auto;
+}
+
+.progressbar-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 5vw;
+  min-width: 18vw;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10vw;
+  background: linear-gradient(180deg, #000000 0%, hsla(280, 49%, 23%, 0.9) 99%);
+  border-radius: 0.3vw;
+  border: #8D3AFE solid 0.2vw;
+  font-weight: bold;
+  font-size: 0.75vw;
+}
+
+
+.line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.progress{
+  width: 100%;
+  height: 0.3vw;
+  background: rgba(255, 255, 255, 0.092);
+  border-radius: 0.3vw;
+}
+
+.fill{
+  height: 100%;
+  width: 100%;
+  background: #8D3AFE;
+  border-radius: 0.3vw;
+  animation: progress 5s linear forwards;
+}
+
+.fa-light{
+  color: #8D3AFE;
+}
+
+@keyframes progress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
