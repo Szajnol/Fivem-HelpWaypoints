@@ -11,7 +11,7 @@ local coords = vec3(2281.5424804688, 4813.0190429688, 55.574935913086 - 1.0)
 
 while true do 
     local playercoords = GetEntityCoords(PlayerPedId())
-    local dist = #(coords-pcoords)
+    local dist = #(coords-playercoords)
     local metry = math.ceil(dist * 1)
     exports['shinyx-HelpWaypoints']:DrawDestination(coords, "Example", metry)
     Wait(0)
