@@ -1,3 +1,8 @@
+Citizen.CreateThread(function()
+    RequestStreamedTextureDict('texture', 'e-key', 0, 0, 0.021, 0.021, 0, 255, 255,255, 100, true)
+end)
+
+
 exports('DrawDestination', function (coords, label, meters)
     DrawDestination(coords, label, meters)
 end)
